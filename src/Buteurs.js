@@ -4,7 +4,7 @@ function Buteurs() {
 
  const Buteurs=[
       { "id":1,
-      "player":{"Player_id":19779,"player_name":" karim Benzema"},
+      "player":{"Player_id":19779,"player_name":" Karim Benzema"},
       "team":"Real Madrid",
       "goals":{"home":7,"away":7},
       },
@@ -16,7 +16,7 @@ function Buteurs() {
   ]
 
 // Partie N°1 : Ex 1 
-  var  Goals = (Buteurs.filter( but => but.player.player_name === "karim Benzema"))
+  var  Goals = (Buteurs.filter(but => but.player.player_name ===" Karim Benzema"))
   .reduce((acc,curValue) => acc+(curValue.goals.home + curValue.goals.away),0)
   
 // Partie N°1 : Ex 2
