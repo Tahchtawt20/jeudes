@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-import { updTask } from "../Config/action"
+import { updateTask } from "../Config/actions"
 import { useNavigate } from "react-router-dom";
 import { useState } from "react"
 
@@ -11,7 +11,7 @@ function UpTask() {
     const dispatch = useDispatch();
     const navigate = useNavigate()
     const handleClick = () => {
-        dispatch(updTask({
+        dispatch(updateTask({
             id:id,
             name:nom,
         }))

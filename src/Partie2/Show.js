@@ -1,7 +1,7 @@
 
-var style = {border:"2px solid black"}
+var style = {border:"2px  black"}
 
-function Show({stagiaire}) {
+function Show({student}) {
     return (
       <table style={style}>
           <tr>
@@ -10,7 +10,7 @@ function Show({stagiaire}) {
             <th>Filiére</th>
             <th>Age</th>
           </tr>     
-          {stagiaire.map(st => (
+          {student.map(st => (
             <tr>
               <td style={style} >{st.nom}</td>
               <td style={style} >{st.prenom}</td>

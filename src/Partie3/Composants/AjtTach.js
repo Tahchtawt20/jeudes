@@ -1,20 +1,20 @@
 
 import { useDispatch , useSelector} from 'react-redux';
 import { useState } from 'react';
-import { addTask } from '../Config/action';
+import { addTask } from '../Config/actions';
 import { useNavigate} from "react-router-dom"
 
-function AddTask() { 
+function AjtTach() { 
     const count = useSelector(data => data.task.length);
     const [nom,setNom]=useState("")
     const dispatch=useDispatch()
-    const navigate=useNavigate()
+    const navigator=useNavigate()
     const handelSubmit = () => {
         dispatch (addTask({
             id:count+1,
             name:nom
         }));
-        navigate('/')
+        navigator('/')
     }
     
     return(
@@ -28,4 +28,4 @@ function AddTask() {
      
 }
         
-    export default AddTask
+    export default AjtTach

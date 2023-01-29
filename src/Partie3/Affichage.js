@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import '../App.css';
-import AddTask from './Composants/AddTask';
+import AjtTach from './Composants/AjtTach';
 import TaskList from './Composants/TaskList';
 import UpTask from './Composants/UpTask';
 function Affichage() {
@@ -9,7 +9,7 @@ function Affichage() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<TaskList />} />
-          <Route path='/Ajouter' element={<AddTask />} />
+          <Route path='/Ajouter' element={<AjtTach />} />
           <Route path='/Modifier/:id' element={<UpTask />} />
         </Routes>
       </BrowserRouter>

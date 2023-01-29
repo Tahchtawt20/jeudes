@@ -1,31 +1,31 @@
 import { useSelector, useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
-import {delTask} from '../Config/action'
+import {deleteTask} from '../Config/actions'
 function TaskList() {
     const Tache = useSelector((data)=>data.task);
     const dispatch = useDispatch();
     const handleDelete = (id) => {
-        dispatch(delTask(id))
+        dispatch(deleteTask(id))
     }
     return (
         <div>
             <p>
                 <input type="text"></input>
                 <Link to="/Ajouter">
-                    <button>Add Taks</button>
+                    <button>Add Task</button>
                 </Link>
             </p>
             <table>
                 <tbody>
-                    {Tache.map((task, index)=> {
+                    {Tache.map((t, index)=> {
                             return (
                             <tr key={index}>
-                                <td>{task.name}</td>
+                                <td>{t.name}</td>
                                 <td>
-                                    <Link to={`/Modifier/${task.id}`}>
+                                    <Link to={`/Modifier/${t.id}`}>
                                         <button>Update</button>
                                     </Link>
-                                    <button onClick={() => handleDelete(task.id)}>Delete</button>
+                                    <button onClick={() => handleDelete(t.id)}>Delete</button>
                                 </td>
                             </tr>
                             )

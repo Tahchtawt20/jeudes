@@ -3,24 +3,17 @@ import Show from "./Show";
 import '../App.css';
 
 function App() {
-// Ex1 ------------------------------------------------------------------------
-    // JsonArray= [
-    //     {nom: "Azrou", prenom: "Mina", age: 20, filiere: "DDWFS"},
-    //     {nom: "Rami", prenom: "Ali", age: 22, filiere: "Marketing"},
-    //     {nom: "Alaoui", prenom: "Ayoub", age: 30, filiere: "Finance"},
-    //     {nom: "Fatima", prenom: "Terbouch", age: 28, filiere: "Ressources humaines"}
-    //     ];
-    const [stagiaire , setStagiaire]= useState([
-        {nom: "Azrou", prenom: "Mina", age: 20, filiere: "DDWFS"},
-        {nom: "Rami", prenom: "Ali", age: 22, filiere: "MARKETING"},
-        {nom: "Alaoui", prenom: "Ayoub", age: 30, filiere: "FINANCE"},
-        {nom: "Terbouch", prenom: "Fatima", age: 28, filiere: "DDWFS"}
+    const [student , setStudent]= useState([
+        {nom: "Brissi", prenom: "Abderahman", age: 20, filiere: "DDWFS"},
+        {nom: "Alaoui", prenom: "Zineb", age: 22, filiere: "INFRASTRUCTURE"},
+        {nom: "Rami", prenom: "Hicham", age: 30, filiere: "GESTION"},
+        {nom: "Zahra", prenom: "Fatima", age: 28, filiere: "DDWFS"}
         ])
     const [filiere , setFiliere]=useState("")
-    const [StagFiltre , setStagFiltre] = useState([]);
+    const [Filtre , setFiltre] = useState([]);
     const handleFilterClick = () => {
-        setStagFiltre(
-          stagiaire.filter(st => st.filiere === filiere)
+        setFiltre(
+          student.filter(st => st.filiere === filiere)
         );
       };
  
@@ -30,7 +23,7 @@ function App() {
      <div className="App">
         <input type="text"  onChange={(e)=>setFiliere(e.target.value.toUpperCase())}/> <br></br>
         <button onClick={handleFilterClick}>Filter</button>
-        <Show  stagiaire={StagFiltre}/>
+        <Show  stagiaire={Filtre}/>
      </div>
    ) 
 }
